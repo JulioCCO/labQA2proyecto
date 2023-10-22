@@ -19,7 +19,7 @@ export class FakeAccountRepository implements AccountRepository {
     return this.listaConnects;
   }
   setListaConnects(cuenta: Account): void {
-    throw new Error('Method not implemented.');
+    this.listaConnects.push(cuenta);
   }
 
   findAccount(email: string): any {
