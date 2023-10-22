@@ -4,9 +4,8 @@ import { instance, mock, reset, when } from 'ts-mockito';
 import { Account } from './account';
 /*
 describe('LoginService', () => {
-  let ac:AccountRepository;
+  let ac: AccountRepository;
   it('should create an instance', () => {
-    
     expect(new LoginService(ac)).toBeTruthy();
   });
 });*/
@@ -59,3 +58,4 @@ describe('LoginService - desconnect', () => {
     expect(result).toBe(false, 'Debería devolver falso ya que el usuario no estaba conectado');
   });
 });
+
