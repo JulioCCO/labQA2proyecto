@@ -10,8 +10,13 @@ export class FakeAccountRepository implements AccountRepository {
   listaConnects: Account[] = []; // Tienen las cuentas que estan conectadas
 
   getLista(): Account[] {
-    throw new Error('Method not implemented.');
+    return this.listaAccounts;
   }
+
+  setLista(lista: Account[]): void {
+    this.listaAccounts = lista;
+  }
+
   save(cuenta: Account): void {
     throw new Error('Method not implemented.');
   }
@@ -29,7 +34,7 @@ export class FakeAccountRepository implements AccountRepository {
         return element;
       }
     }
-    return null;
+    return undefined;
   }
 
   findRol(cuenta: Account): Rol {
